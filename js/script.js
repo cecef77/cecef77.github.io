@@ -1,14 +1,12 @@
-// event saat di klit
-$('.page-scroll').on('click', function(e){
- // ambil
- var xo = $(this).attr('href');
-//tankap eleme
- var yo = $(xo);
-    $('body').animate({
-       scrolltop: yo.offset().top - 50
-    }, 1250, 'easeInOutExpo');
+$('.page-scroll').on('click', function(e) {
 
-  e.preventDefault();
-
-});
-
+   var tujuan = $(this).attr('href');
+  
+   var elemenTujuan = $(tujuan);
+  
+   $('html , body').animate({
+    scrollTop: elemenTujuan.offset().top - 50
+   }, 1250, 'easeInOutCubic');
+  
+   e.preventDefault();
+  });
