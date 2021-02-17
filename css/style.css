@@ -1,3 +1,7 @@
+body {
+    position: relative;
+    margin-top: 30px;
+
 }
 
 .jumbotron img {
@@ -5,11 +9,35 @@
     border: 5px solid #666666;
 }
 
-body {
-    position: relative;
-    margin-top: 30px;
-    bottom: 100p%;
+/* paralax NOTE.1 */
+.jumbotron {
+    background-image: url(../img/header-paralax.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+
 }
+
+/* paragrap paralax */
+.pkiri,
+.pkanan {
+    opacity: 0;
+    transform: translate(-50px, 0) scale(-1, 4);
+    transition: 1s;
+}
+
+.pkanan {
+    transform: translate(50px, 0) scale(-1, 4);
+}
+
+.pkiri.pmuncul,
+.pkanan.pmuncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* paragrap paralax */
+
 
 hr {
     width: 250px;
@@ -17,13 +45,32 @@ hr {
 }
 
 section {
-    min-height: 600px;
+    min-height: 500px;
 }
+
 
 .portofolio {
     background-color: #eee;
 
 }
+
+.portofolio .thumbnail {
+    opacity: 0;
+    transition: 0.3s;
+    transform: translate(0, -40px);
+
+
+}
+
+.portofolio .thumbnail.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+
+}
+
+
+
+
 
 .kontak {
     min-height: 800px;
